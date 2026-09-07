@@ -1,0 +1,43 @@
+/* ===== Entrée au chargement (hero) ===== */
+@keyframes entree{
+  from{opacity:0;transform:translateY(24px)}
+  to{opacity:1;transform:none}
+}
+.accueil-texte > *{animation:entree .7s cubic-bezier(.16,1,.3,1) both}
+.accueil-texte > *:nth-child(1){animation-delay:.05s}
+.accueil-texte > *:nth-child(2){animation-delay:.15s}
+.accueil-texte > *:nth-child(3){animation-delay:.24s}
+.accueil-texte > *:nth-child(4){animation-delay:.33s}
+.accueil-texte > *:nth-child(5){animation-delay:.42s}
+.accueil-texte > *:nth-child(6){animation-delay:.5s}
+.accueil-visuel{animation:entree .8s cubic-bezier(.16,1,.3,1) .3s both}
+
+/* ===== Pastille de statut : léger pouls ===== */
+@keyframes pouls{
+  0%{box-shadow:0 0 0 0 rgba(76,125,255,.55)}
+  70%{box-shadow:0 0 0 8px rgba(76,125,255,0)}
+  100%{box-shadow:0 0 0 0 rgba(76,125,255,0)}
+}
+
+/* ===== Fenêtre modale ===== */
+@keyframes modale-entree{
+  from{opacity:0;transform:translateY(14px) scale(.98)}
+  to{opacity:1;transform:none}
+}
+
+/* ===== Bandeau de mots-clés défilant ===== */
+@keyframes defilement{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+
+/* ===== Apparition au défilement ===== */
+.apparait{opacity:0;transform:translateY(28px);transition:opacity .55s ease-out,transform .55s ease-out}
+.apparait.visible{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  .apparait{opacity:1;transform:none}
+  .accueil-texte > *,.accueil-visuel{animation:none;opacity:1;transform:none}
+  .statut-point{animation:none}
+  .bandeau-piste{animation:none}
+}

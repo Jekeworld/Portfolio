@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Léo Cohen — Développement, Systèmes &amp; Réseaux</title>
+<meta name="description" content="Portfolio de Léo Cohen, étudiant à l'IPSSI : développement logiciel et web, administration système et virtualisation, réseaux et sécurité.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/composants.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+<a class="lien-evitement" href="#accueil">Aller au contenu</a>
+<div class="progression" id="progression"></div>
+
+<svg class="sr-only" aria-hidden="true" style="position:absolute;width:0;height:0">
+  <symbol id="icone-dev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l-6-6 6-6M15 6l6 6-6 6"/></symbol>
+  <symbol id="icone-serveur" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6" rx="1"/><rect x="3" y="14" width="18" height="6" rx="1"/><circle cx="7" cy="7" r=".6" fill="currentColor"/><circle cx="7" cy="17" r=".6" fill="currentColor"/></symbol>
+  <symbol id="icone-reseau" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/><path d="M12 7.2V12M12 12L6.4 17.2M12 12l5.6 5.2"/></symbol>
+</svg>
+
+<header class="entete-site">
+  <div class="enveloppe entete-site-int">
+    <a class="marque" href="#accueil">
+      <span class="marque-badge"><img src="assets/img/profil.jpg" alt="Léo Cohen" class="marque-badge-img"></span>
+      <span class="marque-texte">Léo Cohen</span>
+    </a>
+    <button class="bascule" id="bascule-menu" type="button" aria-expanded="false" aria-controls="menu-principal">
+      <span class="bascule-trait"></span><span class="bascule-trait"></span><span class="bascule-trait"></span>
+      <span class="sr-only">Ouvrir le menu</span>
+    </button>
+    <nav class="nav" id="menu-principal">
+      <ul class="liste-nav">
+        <li><a class="lien-nav" href="#accueil" data-cible="accueil">Accueil</a></li>
+        <li><a class="lien-nav" href="#competences" data-cible="competences">Compétences</a></li>
+        <li><a class="lien-nav" href="#experience" data-cible="experience">Expérience</a></li>
+        <li><a class="lien-nav" href="#projets" data-cible="projets">Projets</a></li>
+        <li><a class="lien-nav" href="#contact" data-cible="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ================= ACCUEIL ================= -->
+  <section class="accueil" id="accueil">
+    <div class="enveloppe accueil-grille">
+      <div class="accueil-texte">
+        <p class="statut-badge"><span class="statut-point"></span>Portfolio — 2025 / 2026</p>
+        <h1 class="accueil-titre"><span>Léo</span><span>Cohen</span></h1>
+        <p class="accueil-soustitre">Étudiant à l'IPSSI en <span class="accent-mot">développement &amp; infrastructure</span></p>
+        <p class="accueil-specialite">Développement web · Administration système · Réseaux &amp; sécurité</p>
+        <div class="cta-groupe">
+          <a class="bouton bouton-principal" href="#projets">Voir mes projets</a>
+          <a class="bouton bouton-secondaire" href="#contact">Me contacter</a>
+        </div>
+        <div class="accueil-stats">
+          <div class="stat"><b>6+</b><span>Projets</span></div>
+          <div class="stat"><b>3</b><span>Domaines</span></div>
+          <div class="stat"><b>IPSSI</b><span>2025 – 2026</span></div>
+        </div>
+      </div>
+
+      <div class="accueil-visuel" aria-hidden="true">
+        <div class="avatar"><img src="assets/img/profil.jpg" alt="Léo Cohen" class="avatar-img"></div>
+      </div>
+    </div>
+
+    <div class="enveloppe a-propos entete-domaine apparait">
+      <span class="etiquette">À propos</span>
+      <h2>Qui suis-je ?</h2>
+      <p>
+        Étudiant à l'IPSSI, je construis des applications web full-stack, j'installe et je sécurise
+        les infrastructures qui les font tourner, et je câble les réseaux qui les relient.
+        <strong>Trois domaines complémentaires, un seul objectif :</strong> comprendre la chaîne
+        technique du code jusqu'au switch, et savoir intervenir à chaque étage.
+      </p>
+    </div>
+  </section>
+
+  <div class="bandeau">
+    <div class="bandeau-piste" aria-hidden="true">
+      <span>PHP</span><span>SQL</span><span>Python</span><span>C#</span><span>Unity</span>
+      <span>Windows Server</span><span>Active Directory</span><span>Proxmox</span><span>Docker</span>
+      <span>Cisco</span><span>VLAN</span><span>OSPF</span><span>Sécurité réseau</span><span>Full-stack</span>
+      <span>PHP</span><span>SQL</span><span>Python</span><span>C#</span><span>Unity</span>
+      <span>Windows Server</span><span>Active Directory</span><span>Proxmox</span><span>Docker</span>
+      <span>Cisco</span><span>VLAN</span><span>OSPF</span><span>Sécurité réseau</span><span>Full-stack</span>
+    </div>
+  </div>
+
+  <!-- ================= COMPÉTENCES ================= -->
+  <section class="competences" id="competences">
+    <div class="enveloppe">
+      <div class="entete-domaine apparait">
+        <span class="etiquette">Vue d'ensemble</span>
+        <h2>Compétences par domaine</h2>
+      </div>
+
+      <div class="competences-grille">
+        <div class="competence-carte apparait" role="button" tabindex="0" aria-pressed="false" data-brin="orange">
+          <div class="competence-interieur">
+            <div class="competence-face competence-face-avant">
+              <div class="competence-icone"><svg><use href="#icone-dev"/></svg></div>
+              <h3>Développement</h3>
+              <p>Applications web full-stack en PHP, Python et C#, du prototype à la mise en production.</p>
+              <span class="competence-indice">Voir les compétences ↻</span>
+            </div>
+            <div class="competence-face competence-face-arriere">
+              <h3>Développement</h3>
+              <ul class="tags">
+                <li>PHP</li><li>MVC</li><li>SQL</li><li>Python</li><li>Dash</li><li>C#</li><li>Unity</li><li>CSS</li><li>JavaScript</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="competence-carte apparait" role="button" tabindex="0" aria-pressed="false" data-brin="vert">
+          <div class="competence-interieur">
+            <div class="competence-face competence-face-avant">
+              <div class="competence-icone"><svg><use href="#icone-serveur"/></svg></div>
+              <h3>Systèmes &amp; virtualisation</h3>
+              <p>Déploiement et administration de serveurs Windows Server et environnements virtualisés.</p>
+              <span class="competence-indice">Voir les compétences ↻</span>
+            </div>
+            <div class="competence-face competence-face-arriere">
+              <h3>Systèmes &amp; virtualisation</h3>
+              <ul class="tags">
+                <li>Windows Server</li><li>Active Directory</li><li>AD DS</li><li>GPO</li><li>Proxmox</li><li>Docker</li><li>LXC</li><li>Debian</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="competence-carte apparait" role="button" tabindex="0" aria-pressed="false" data-brin="bleu">
+          <div class="competence-interieur">
+            <div class="competence-face competence-face-avant">
+              <div class="competence-icone"><svg><use href="#icone-reseau"/></svg></div>
+              <h3>Réseaux &amp; sécurité</h3>
+              <p>Conception d'architectures réseau Cisco : segmentation, haute disponibilité et sécurisation.</p>
+              <span class="competence-indice">Voir les compétences ↻</span>
+            </div>
+            <div class="competence-face competence-face-arriere">
+              <h3>Réseaux &amp; sécurité</h3>
+              <ul class="tags">
+                <li>Cisco</li><li>VLAN</li><li>VTP</li><li>802.1Q</li><li>STP</li><li>EtherChannel</li><li>OSPF</li><li>HSRP</li><li>ACL</li><li>UFW</li><li>OPNsense</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPÉRIENCE & FORMATION ================= -->
+  <section class="experience" id="experience">
+    <div class="enveloppe">
+      <div class="entete-domaine apparait">
+        <span class="etiquette">Parcours</span>
+        <h2>Expérience et formation</h2>
+      </div>
+
+      <div class="parcours">
+
+        <div class="parcours-item apparait">
+          <span class="parcours-noeud" aria-hidden="true"></span>
+          <div class="carte">
+            <p class="periode">Fin du secondaire</p>
+            <h3>Baccalauréat</h3>
+          </div>
+        </div>
+
+        <div class="parcours-item apparait">
+          <span class="parcours-noeud" aria-hidden="true"></span>
+          <div class="carte">
+            <p class="periode">Rentrée post-bac</p>
+            <h3>Première année — Informatique, IPSSI</h3>
+            <p class="resume">
+              Entrée dans le supérieur : découverte du développement, des systèmes et des réseaux.
+            </p>
+          </div>
+        </div>
+
+        <div class="parcours-item apparait">
+          <span class="parcours-noeud" aria-hidden="true"></span>
+          <div class="carte">
+            <p class="periode">Stage</p>
+            <h3>Stagiaire Data Analyst — Trelleborg</h3>
+            <ul class="detail">
+              <li>Interface Python conçue avec le framework Dash pour afficher et contrôler des données industrielles.</li>
+              <li>Tableau filtrable avec mise en évidence des anomalies et infobulles au survol.</li>
+              <li>Restitution technique présentée aux équipes en Angleterre.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="parcours-item apparait">
+          <span class="parcours-noeud" aria-hidden="true"></span>
+          <div class="carte">
+            <p class="periode">2025 – Présent</p>
+            <h3>Formation généraliste — IPSSI</h3>
+            <p class="resume">
+              Cursus orienté développement, administration système et réseaux : une formation
+              transversale plutôt qu'une spécialisation unique.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJETS ================= -->
+  <section class="projets" id="projets">
+    <div class="enveloppe">
+      <div class="entete-domaine apparait">
+        <span class="etiquette">Projets scolaires</span>
+        <h2>Mes projets</h2>
+      </div>
+
+      <div class="projets-grille">
+
+        <div class="carte projet-carte apparait" role="button" tabindex="0" data-brin="orange">
+          <span class="categorie">Développement</span>
+          <h3>Solution full-stack pour un prestataire</h3>
+          <p class="resume-court">Portail sécurisé à quatre rôles avec base SQL et interface en mode sombre.</p>
+          <span class="voir-plus">Voir le détail →</span>
+          <template>
+            <p class="periode">Décembre 2025</p>
+            <h3>Solution full-stack pour un prestataire</h3>
+            <ul class="detail">
+              <li>Système d'accès sécurisé gérant quatre rôles distincts : administrateur, école, entreprise et utilisateur.</li>
+              <li>Modélisation et administration d'une base SQL pour la persistance des quiz et des résultats.</li>
+              <li>Interface animée en CSS avec mode sombre.</li>
+            </ul>
+            <ul class="tags"><li>Full-stack</li><li>SQL</li><li>Gestion des rôles</li><li>CSS</li></ul>
+          </template>
+        </div>
+
+        <div class="carte projet-carte apparait" role="button" tabindex="0" data-brin="orange">
+          <span class="categorie">Développement</span>
+          <h3>Application web PHP en architecture MVC</h3>
+          <p class="resume-court">Plateforme de quiz interactifs structurée en modèle, vue et contrôleur.</p>
+          <span class="voir-plus">Voir le détail →</span>
+          <template>
+            <p class="periode">Septembre – Décembre 2025</p>
+            <h3>Application web PHP en architecture MVC</h3>
+            <p class="resume">
+              Conception et développement d'une plateforme de quiz interactifs structurée en modèle,
+              vue et contrôleur, du routage jusqu'à la couche de données.
+            </p>
+            <ul class="tags"><li>PHP</li><li>MVC</li><li>SQL</li></ul>
+          </template>
+        </div>
+
+        <div class="carte projet-carte apparait" role="button" tabindex="0" data-brin="orange">
+          <span class="categorie">Développement</span>
+          <h3>Jeu web narratif</h3>
+          <p class="resume-court">Jeu textuel à embranchements, dont vous êtes le héros.</p>
+          <span class="voir-plus">Voir le détail →</span>
+          <template>
+            <p class="periode">Septembre – Décembre 2025</p>
+            <h3>Jeu web narratif</h3>
+            <p class="resume">
+              Jeu textuel « dont vous êtes le héros » : arborescence de choix, gestion de l'état
+              de la partie et progression du joueur au fil du récit.
+            </p>
+            <ul class="tags"><li>Web</li><li>Narration interactive</li><li>Gestion d'état</li></ul>
+          </template>
+        </div>
+
+        <div class="carte projet-carte apparait" role="button" tabindex="0" data-brin="orange">
+          <span class="categorie">Développement</span>
+          <h3>Jeu de plateforme 2D sous Unity</h3>
+          <p class="resume-court">Plateformer 2D en C# avec gestion des collisions et paliers de difficulté.</p>
+          <span class="voir-plus">Voir le détail →</span>
+          <template>
+            <p class="periode">Projet personnel et académique</p>
+            <h3>Jeu de plateforme 2D sous Unity</h3>
+            <ul class="detail">
+              <li>Développement en C# avec character controllers et gestion des collisions.</li>
+              <li>Création de niveaux, interface et paliers de difficulté progressive.</li>
+            </ul>
+            <ul class="tags"><li>Unity</li><li>C#</li><li>Game design</li></ul>
+          </template>
+        </div>
+
+        <div class="carte projet-carte apparait" role="button" tabindex="0" data-brin="vert">
+          <span class="categorie">Systèmes</span>
+          <h3>Gestion d'identités sous Windows Server</h3>
+          <p class="resume-court">Contrôleur de domaine, unités organisationnelles et stratégies de groupe.</p>
+          <span class="voir-plus">Voir le détail →</span>
+          <template>
+            <p class="periode">Janvier – Février 2026</p>
+            <h3>Gestion d'identités sous Windows Server</h3>
+            <ul class="detail">
+              <li>Installation et configuration d'un contrôleur de domaine avec déploiement du rôle AD DS.</li>
+              <li>Structure d'unités organisationnelles reflétant l'organigramme de l'entreprise.</li>
+              <li>Stratégies de groupe restreignant les accès.</li>
+            </ul>
+            <ul class="tags"><li>Windows Server</li><li>Active Directory</li><li>GPO</li></ul>
+          </template>
+        </div>
+
+        <div class="carte projet-carte apparait" role="button" tabindex="0" data-brin="vert">
+          <span class="categorie">Systèmes</span>
+          <h3>Serveur de virtualisation Proxmox</h3>
+          <p class="resume-court">Hyperviseur type 1 hébergeant VM, conteneurs LXC et Docker.</p>
+          <span class="voir-plus">Voir le détail →</span>
+          <template>
+            <p class="periode">Février 2026</p>
+            <h3>Serveur de virtualisation Proxmox</h3>
+            <ul class="detail">
+              <li>Mise en place d'un hyperviseur de type 1 pour isoler plusieurs environnements d'apprentissage.</li>
+              <li>Création et gestion de machines virtuelles et de conteneurs LXC.</li>
+              <li>Administration de Docker sur une base Debian.</li>
+            </ul>
+            <ul class="tags"><li>Proxmox</li><li>LXC</li><li>Docker</li></ul>
+          </template>
+        </div>
+
+        <div class="carte projet-carte apparait" role="button" tabindex="0" data-brin="vert">
+          <span class="categorie">Systèmes</span>
+          <h3>Projet DataNova</h3>
+          <p class="resume-court">Proposition technique pour moderniser une infrastructure système.</p>
+          <span class="voir-plus">Voir le détail →</span>
+          <template>
+            <p class="periode">Étude d'infrastructure</p>
+            <h3>Projet DataNova</h3>
+            <p class="resume">
+              Rédaction d'une proposition technique détaillée pour la modernisation d'une infrastructure
+              système : état des lieux, architecture cible et justification des choix.
+            </p>
+            <ul class="tags"><li>Architecture</li><li>Documentation</li></ul>
+          </template>
+        </div>
+
+        <div class="carte projet-carte apparait" role="button" tabindex="0" data-brin="bleu">
+          <span class="categorie">Réseaux</span>
+          <h3>Architecture LAN redondante pour une PME</h3>
+          <p class="resume-court">Réseau segmenté par service avec VLANs et trunking Cisco.</p>
+          <span class="voir-plus">Voir le détail →</span>
+          <template>
+            <p class="periode">Janvier – Février 2026</p>
+            <h3>Architecture LAN redondante pour une PME</h3>
+            <ul class="detail">
+              <li>Conception d'une infrastructure réseau segmentée par service.</li>
+              <li>Configuration des switches : VTP, VLANs et trunking 802.1Q.</li>
+            </ul>
+            <ul class="tags"><li>Cisco</li><li>VLAN</li><li>802.1Q</li></ul>
+          </template>
+        </div>
+
+        <div class="carte projet-carte apparait" role="button" tabindex="0" data-brin="bleu">
+          <span class="categorie">Réseaux</span>
+          <h3>Haute disponibilité et routage inter-VLAN</h3>
+          <p class="resume-court">Redondance Spanning Tree, EtherChannel et routage inter-VLAN.</p>
+          <span class="voir-plus">Voir le détail →</span>
+          <template>
+            <p class="periode">Janvier – Février 2026</p>
+            <h3>Haute disponibilité et routage inter-VLAN</h3>
+            <ul class="detail">
+              <li>Redondance de niveau 2 avec Spanning Tree et agrégation de liens EtherChannel (LACP).</li>
+              <li>Routage entre réseaux par Router-on-a-Stick et interfaces virtuelles.</li>
+            </ul>
+            <ul class="tags"><li>STP</li><li>EtherChannel</li><li>SVI</li></ul>
+          </template>
+        </div>
+
+        <div class="carte projet-carte apparait" role="button" tabindex="0" data-brin="bleu">
+          <span class="categorie">Réseaux</span>
+          <h3>Routage avancé et durcissement</h3>
+          <p class="resume-court">Routage OSPF, HSRP et durcissement par ACL et pare-feux.</p>
+          <span class="voir-plus">Voir le détail →</span>
+          <template>
+            <p class="periode">Travaux pratiques Cisco</p>
+            <h3>Routage avancé et durcissement</h3>
+            <ul class="detail">
+              <li>Protocoles de routage OSPF et redondance de passerelle HSRP sur équipements Cisco.</li>
+              <li>Règles de sécurité : ACL, Port-Security et pare-feux UFW et OPNsense.</li>
+            </ul>
+            <ul class="tags"><li>OSPF</li><li>HSRP</li><li>ACL</li></ul>
+          </template>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact" id="contact">
+    <div class="enveloppe">
+      <div class="contact-tete apparait">
+        <span class="etiquette">Dernier fil</span>
+        <h2>Branchons-nous.</h2>
+        <p>Je cherche une alternance mêlant développement et infrastructure. Écrivez-moi, je réponds vite.</p>
+      </div>
+
+      <div class="contact-carte apparait">
+        <div class="contact-ligne">
+          <span class="contact-cle">Email</span>
+          <span class="lien-copie">
+            <a class="contact-val" href="mailto:cohenleo3@gmail.com" id="lien-email">cohenleo3@gmail.com</a>
+            <span class="copie-msg" id="copie-msg">Copié !</span>
+          </span>
+        </div>
+        <div class="contact-ligne">
+          <span class="contact-cle">GitHub</span>
+          <a class="contact-val" href="https://github.com/Jekeworld" target="_blank" rel="noopener">Mon profil Github</a>
+        </div>
+        <div class="contact-ligne">
+          <span class="contact-cle">LinkedIn</span>
+          <a class="contact-val" href="https://www.linkedin.com/in/l%C3%A9o-cohen-b4b433213/" target="_blank" rel="noopener">Mon profil Linkedin</a>
+        </div>
+        <div class="contact-ligne">
+          <span class="contact-cle">CV</span>
+          <a class="contact-val" href="CV-Leo.pdf" target="_blank" rel="noopener">Télécharger le PDF</a>
+        </div>
+      </div>
+
+      <a class="bouton bouton-principal apparait" href="mailto:cohenleo3@gmail.com">Envoyer un e-mail</a>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="enveloppe">Léo Cohen · IPSSI · Portfolio 2026</div>
+</footer>
+
+<button class="bouton-haut" id="bouton-haut" type="button" aria-label="Remonter en haut de page">↑</button>
+
+<div class="modale" id="modale-projet" hidden>
+  <div class="modale-tapis" data-fermer></div>
+  <div class="modale-panneau" role="dialog" aria-modal="true" aria-label="Détail du projet">
+    <button class="modale-fermer" type="button" data-fermer aria-label="Fermer">✕</button>
+    <div class="modale-corps" id="modale-corps"></div>
+  </div>
+</div>
+
+<script src="js/navigation.js" defer></script>
+<script src="js/progress.js" defer></script>
+<script src="js/reveal.js" defer></script>
+<script src="js/contact.js" defer></script>
+<script src="js/competences.js" defer></script>
+<script src="js/projets.js" defer></script>
+</body>
+</html>

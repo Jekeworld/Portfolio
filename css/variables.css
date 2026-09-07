@@ -1,0 +1,39 @@
+/* ===== Jetons de design ===== */
+:root{
+  /* Fond / encre (thème sombre, bleu nuit) */
+  --fond:#060810;
+  --fond-2:#0A0D18;
+  --panneau:#0D1120;
+  --panneau-clair:#131829;
+  --encre:#F4F6FB;
+  --encre-douce:#8991A8;
+
+  /* Bordures translucides */
+  --bordure:rgba(244,246,251,.10);
+  --bordure-forte:rgba(244,246,251,.20);
+
+  /* Accent de marque + un fil de couleur par domaine */
+  --orange:#FF7A45;
+  --vert:#3ECF8E;
+  --bleu:#4C7DFF;
+  --accent:var(--bleu);
+  --accent-doux:rgba(76,125,255,.14);
+  --brin:var(--accent);
+
+  /* Typographie */
+  --police-affiche:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --police-texte:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --police-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  /* Structure : coins arrondis, ombres douces, halos */
+  --rayon:18px;
+  --rayon-lg:26px;
+  --rayon-pill:999px;
+  --trait-fin:1px;
+
+  --ombre-carte:0 24px 48px -28px rgba(0,0,0,.7);
+  --lueur:0 0 0 1px var(--bordure-forte),0 0 32px -6px var(--accent-glow,rgba(76,125,255,.5));
+
+  --gouttiere:100px;
+  --enveloppe-max:1160px;
+}
