@@ -2,7 +2,7 @@
 (function(){
   var traductions = {
     fr: {
-      meta_title: "Léo Cohen — Développement, Systèmes &amp; Réseaux",
+      meta_title: "Portfolio Léo Cohen",
       meta_description: "Portfolio de Léo Cohen, étudiant à l'IPSSI : développement logiciel et web, administration système et virtualisation, réseaux et sécurité.",
       skip_link: "Aller au contenu",
       nav_home: "Accueil",
@@ -124,7 +124,7 @@
       modal_close_aria: "Fermer"
     },
     en: {
-      meta_title: "Léo Cohen — Development, Systems &amp; Networks",
+      meta_title: "Portfolio Léo Cohen",
       meta_description: "Portfolio of Léo Cohen, student at IPSSI: software and web development, system administration and virtualization, networking and security.",
       skip_link: "Skip to content",
       nav_home: "Home",
