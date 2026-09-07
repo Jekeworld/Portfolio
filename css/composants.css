@@ -41,6 +41,19 @@
 .lien-nav:hover,.lien-nav:focus-visible{color:var(--encre)}
 .lien-nav.actif{background:var(--accent);color:var(--encre)}
 
+/* ===== Bascule de langue ===== */
+.lang-switch{
+  display:flex;gap:2px;padding:4px;flex:none;
+  background:var(--panneau);border:var(--trait-fin) solid var(--bordure);border-radius:var(--rayon-pill);
+}
+.lang-btn{
+  font-family:var(--police-mono);font-weight:600;font-size:12px;letter-spacing:.04em;
+  color:var(--encre-douce);background:transparent;border:none;cursor:pointer;
+  padding:7px 12px;border-radius:var(--rayon-pill);transition:background .18s ease,color .18s ease;
+}
+.lang-btn:hover,.lang-btn:focus-visible{color:var(--encre)}
+.lang-btn.actif{background:var(--accent);color:var(--encre)}
+
 /* ===== Accueil : texte ===== */
 .statut-badge{
   display:inline-flex;align-items:center;gap:9px;
@@ -160,6 +173,13 @@
   font-family:var(--police-affiche);font-weight:700;font-size:1.2rem;letter-spacing:-.01em;
   margin:0 0 6px;
 }
+.carte-entete{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.carte-entete h3{flex:1}
+.carte-logo{
+  flex-shrink:0;width:76px;height:76px;border-radius:12px;background:#fff;
+  display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box;
+}
+.carte-logo img{width:100%;height:100%;object-fit:contain}
 .periode{
   font-family:var(--police-mono);font-size:11.5px;color:var(--brin,var(--encre-douce));
   letter-spacing:.04em;margin:0 0 14px;
@@ -168,16 +188,26 @@
 .carte ul.detail,.modale-corps ul.detail{margin:0;padding-left:18px;color:var(--encre-douce);max-width:64ch}
 .carte ul.detail li,.modale-corps ul.detail li{margin-bottom:6px}
 
-.categorie{
-  display:inline-block;font-family:var(--police-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
-  color:var(--brin);background:var(--brin-doux);border-radius:var(--rayon-pill);padding:4px 11px;margin:0 0 14px;
-}
-
 .tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:14px 0 0;padding:0}
 .tags li{
   font-family:var(--police-texte);font-size:12px;font-weight:500;
   color:var(--encre-douce);border:var(--trait-fin) solid var(--bordure);border-radius:var(--rayon-pill);
   padding:4px 12px;
+}
+
+/* ===== Projets : en-tête de groupe ===== */
+.projets-groupe-entete{
+  display:flex;align-items:center;gap:12px;margin:0 0 22px;
+  padding-bottom:14px;border-bottom:var(--trait-fin) solid var(--bordure);
+}
+.projets-groupe-icone{
+  width:34px;height:34px;border-radius:10px;flex:none;
+  background:var(--brin-doux);color:var(--brin);
+  display:flex;align-items:center;justify-content:center;
+}
+.projets-groupe-icone svg{width:17px;height:17px}
+.projets-groupe-entete h3{
+  font-family:var(--police-affiche);font-weight:700;font-size:1.1rem;margin:0;color:var(--brin);
 }
 
 /* ===== Projets : carte cliquable ===== */
